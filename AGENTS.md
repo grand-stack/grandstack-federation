@@ -35,3 +35,4 @@ The stack: `docker compose -f compose.yaml -f compose.federation.yaml up --build
 - Keep the diagram legends and coverage numbers in the docs true when the data or links change.
 - New code files need the copyright header (two lines: `Copyright (c) "Neo4j"` and `Neo4j Sweden AB [http://neo4j.com]`, in the file's comment syntax). Run `node ../grandstack/scripts/add-headers.mjs` (or `node ../.github/scripts/headers.mjs --root .` for one repository) to add it; `--check` lists what is missing. Generated files are exempt.
 - Releases use the **release-cut** workflow (Actions tab), which sets the version in every `package.json`, tags and publishes. Do not bump versions or push tags by hand; see `grandstack/docs/releasing.md`.
+- `package.json` `overrides` pin `@graphql-tools/utils` to 12.1.0 and `uuid` to 11.1.1 to clear Dependabot security alerts. Remove an override only when the dependency ships a patched version; rerun `npm test` and the smoke test when you change them.
