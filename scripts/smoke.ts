@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 // Checks a RUNNING federation stack (docker compose -f compose.yaml -f compose.federation.yaml up --build):
 // one query returns Neo4j and Wikipedia data, unlinked entities give null, writes work through the gateway.
 // Needs internet (the Wikipedia part is live). Creates and removes a movie titled "ZZ Federation ...".

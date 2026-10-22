@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 import { describe, expect, it } from "vitest";
 import { filmCandidates, matchFilm, matchPerson, personCandidates } from "../scripts/matching.js";
 import fixtures from "./fixtures/summaries.json" with { type: "json" };

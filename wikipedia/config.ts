@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 /** Settings for the Wikipedia subgraph, from environment variables. */
 export interface Config {
   port: number;

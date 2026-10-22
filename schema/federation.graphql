@@ -1,3 +1,5 @@
+# Copyright (c) "Neo4j"
+# Neo4j Sweden AB [http://neo4j.com]
 # Extra schema for grandstack-server when FEDERATION=true (mounted with SCHEMA_EXTRA_PATHS).
 # It makes Movie and Person federation entities keyed on their English Wikipedia page title, so the Wikipedia subgraph can extend them.
 extend schema @link(url: "https://specs.apollo.dev/federation/v2.0", import: ["@key"])

@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 // The Wikipedia subgraph: a small federated GraphQL server that adds a Wikipedia summary to Movie and Person.
 import { createServer } from "node:http";
 import { createYoga } from "graphql-yoga";

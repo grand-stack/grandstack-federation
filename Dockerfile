@@ -1,3 +1,5 @@
+# Copyright (c) "Neo4j"
+# Neo4j Sweden AB [http://neo4j.com]
 # The Wikipedia subgraph (the Neo4j subgraph is grandstack-server with FEDERATION=true).
 FROM node:24-slim AS build
 WORKDIR /app

@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 // Rules for deciding whether a Wikipedia summary is the right page for a film or a person. Pure functions, no network.
 export interface Summary {
   type?: string;

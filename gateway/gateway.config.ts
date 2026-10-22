@@ -1,3 +1,5 @@
+// Copyright (c) "Neo4j"
+// Neo4j Sweden AB [http://neo4j.com]
 // Hive Gateway serving gateway/supergraph.graphql: the one GraphQL endpoint for both subgraphs.
 // The supergraph was composed against localhost addresses; here the subgraph addresses are replaced for the compose network.
 import { defineConfig } from "@graphql-hive/gateway";
