@@ -26,9 +26,11 @@ returns the film from Neo4j and `"1995 crime drama film by Michael Mann"` from W
 
 ## Run it
 
-With `grandstack`, `grandstack-server`, `grandstack-web` and this repo side by side:
+Clone `grandstack`, `grandstack-server`, `grandstack-web` and this repo side by side into one folder, then start the stack from the `grandstack` folder:
 
 ```sh
+mkdir grand-stack && cd grand-stack      # any folder name
+for repo in grandstack grandstack-server grandstack-web grandstack-federation; do git clone https://github.com/grand-stack/$repo; done
 cd grandstack
 docker compose -f compose.yaml -f compose.federation.yaml up --build
 ```
@@ -40,7 +42,7 @@ docker compose -f compose.yaml -f compose.federation.yaml up --build
 | http://localhost:4001/graphql | The Neo4j subgraph, for development |
 | http://localhost:4010/graphql | The Wikipedia subgraph, for development |
 
-The first start of the gateway needs a `gateway/supergraph.graphql`; the committed one works as it is. After changing either subgraph's schema, run `npm run compose` (see [composition](docs/composition.md)). With the stack up: `npm run smoke`.
+The first start of the gateway needs a `gateway/supergraph.graphql`; the committed one works as it is. After changing either subgraph's schema, run `npm run compose` (see [composition](docs/composition.md)). With the stack up, run `npm ci` and then `npm run smoke` inside the `grandstack-federation` folder.
 
 ## Documentation
 

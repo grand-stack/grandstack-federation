@@ -8,6 +8,8 @@
 | `npm run docs:check` | nothing | links, anchors, image alt text, SVG safety, diagram legends |
 | `npm run links` | the stack running, and internet | rebuilds `seed/wikipedia-links.cypher` (not a test; see [linking](linking.md)) |
 
+> **Where to run this.** Commands on this page that start with `npm`, `node` or `docker build` run inside a clone of this repository: `git clone https://github.com/grand-stack/grandstack-federation`, then `cd grandstack-federation` (Node 22 or later; run `npm ci` once). Commands that need the running stack use the `grandstack` repository's compose files: see the [quickstart](https://grandstack.ai/quickstart/).
+
 ## Unit tests (`npm test`)
 
 - `matching.test.ts`: the link-matching rules against recorded Wikipedia summaries (`test/fixtures/summaries.json`): right page, a disambiguation page, a namesake in another job, a film of the same name from another year, a film accepted by its "(YYYY film)" title, a duo's shared page, a redirect to a film.
