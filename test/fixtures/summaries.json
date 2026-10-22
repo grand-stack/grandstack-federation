@@ -1,0 +1,14 @@
+{
+  "matrix": {"type":"standard","titles":{"normalized":"The Matrix"},"description":"1999 film by the Wachowskis","extract":"The Matrix is a 1999 science fiction action film.","wikibase_item":"Q83495"},
+  "heatEnergy": {"type":"standard","titles":{"normalized":"Heat"},"description":"Type of energy transfer","extract":"In thermodynamics, heat is energy in transfer."},
+  "heatFilm": {"type":"standard","titles":{"normalized":"Heat (1995 film)"},"description":"1995 film by Michael Mann","extract":"Heat is a 1995 American neo-noir crime film.","wikibase_item":"Q220910"},
+  "alienDisambiguation": {"type":"disambiguation","titles":{"normalized":"Alien"},"description":"Topics referred to by the same term","extract":"Alien primarily refers to: ..."},
+  "alienFilmWrongYear": {"type":"standard","titles":{"normalized":"Alien (film)"},"description":"1979 film by Ridley Scott","extract":"Alien is a 1979 science fiction horror film."},
+  "nolan": {"type":"standard","titles":{"normalized":"Christopher Nolan"},"description":"British and American filmmaker (born 1970)","wikibase_item":"Q25191"},
+  "chrisEvansPresenter": {"type":"standard","titles":{"normalized":"Chris Evans (presenter)"},"description":"English radio and television presenter"},
+  "parasiteBiology": {"type":"standard","titles":{"normalized":"Parasitism"},"description":"Type of symbiotic relationship between organisms"},
+  "pianistBiopic": {"type":"standard","titles":{"normalized":"The Pianist (2002 film)"},"description":"Biopic directed by Roman Polanski","extract":"The Pianist is a biographical drama."},
+  "wachowskis": {"type":"standard","titles":{"normalized":"The Wachowskis"},"description":"American filmmakers"},
+  "aliensForActress": {"type":"standard","titles":{"normalized":"Aliens (film)"},"description":"1986 film by James Cameron"},
+  "problem": {"type":"https://mediawiki.org/wiki/HyperSwitch/errors/not_found","title":"Not found."}
+}

@@ -1,0 +1,35 @@
+{
+  "name": "grandstack-federation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "description": "Federation for GRANDstack: the Neo4j subgraph plus a Wikipedia subgraph, composed and served by Hive Gateway",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "wikipedia": "tsx wikipedia/index.ts",
+    "compose": "mesh-compose -c gateway/mesh.config.ts -o gateway/supergraph.graphql",
+    "gateway": "hive-gateway supergraph gateway/supergraph.graphql --config-path gateway/gateway.config.ts --port 4300",
+    "links": "tsx scripts/resolve-links.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "docs:check": "node scripts/check-links.mjs",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@apollo/subgraph": "2.14.4",
+    "graphql": "16.14.2",
+    "graphql-yoga": "5.24.6"
+  },
+  "devDependencies": {
+    "@graphql-hive/gateway": "2.15.2",
+    "@graphql-mesh/compose-cli": "1.8.4",
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}

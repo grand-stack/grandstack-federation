@@ -1,0 +1,17 @@
+# Extra schema for grandstack-server when FEDERATION=true (mounted with SCHEMA_EXTRA_PATHS).
+# It makes Movie and Person federation entities keyed on their English Wikipedia page title, so the Wikipedia subgraph can extend them.
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.0", import: ["@key"])
+
+extend type Movie @key(fields: "wikipediaTitle") {
+  """English Wikipedia page title of this film, for example "Heat (1995 film)". Null when the film has not been linked. Set by seed/wikipedia-links.cypher."""
+  wikipediaTitle: String
+  """Wikidata item id of this film, for example Q220910. Null when the film has not been linked."""
+  wikidataId: String
+}
+
+extend type Person @key(fields: "wikipediaTitle") {
+  """English Wikipedia page title of this person, for example "Christopher Nolan". Null when the person has not been linked. Set by seed/wikipedia-links.cypher."""
+  wikipediaTitle: String
+  """Wikidata item id of this person, for example Q25191. Null when the person has not been linked."""
+  wikidataId: String
+}

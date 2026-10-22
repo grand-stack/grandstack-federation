@@ -1,0 +1,55 @@
+
+> grandstack-federation@0.1.0 links
+> tsx scripts/resolve-links.ts
+
+152 films, 464 people
+  HTTP 429, waiting 10 s
+  looked up 20 of 152 titles
+  looked up 40 of 152 titles
+  looked up 60 of 152 titles
+  looked up 80 of 152 titles
+  looked up 100 of 152 titles
+  looked up 120 of 152 titles
+  looked up 140 of 152 titles
+  looked up 152 of 152 titles
+  looked up 20 of 79 titles
+  looked up 40 of 79 titles
+  HTTP 429, waiting 53 s
+  looked up 60 of 79 titles
+  looked up 79 of 79 titles
+  looked up 20 of 29 titles
+  looked up 29 of 29 titles
+  looked up 20 of 464 titles
+  looked up 40 of 464 titles
+  looked up 60 of 464 titles
+  looked up 80 of 464 titles
+  looked up 100 of 464 titles
+  looked up 120 of 464 titles
+  HTTP 429, waiting 52 s
+  looked up 140 of 464 titles
+  looked up 160 of 464 titles
+  looked up 180 of 464 titles
+  looked up 200 of 464 titles
+  looked up 220 of 464 titles
+  looked up 240 of 464 titles
+  looked up 260 of 464 titles
+  looked up 280 of 464 titles
+  looked up 300 of 464 titles
+  looked up 320 of 464 titles
+  HTTP 429, waiting 52 s
+  looked up 340 of 464 titles
+  looked up 360 of 464 titles
+  looked up 380 of 464 titles
+  looked up 400 of 464 titles
+  looked up 420 of 464 titles
+  looked up 440 of 464 titles
+  looked up 460 of 464 titles
+  looked up 464 of 464 titles
+  looked up 16 of 16 titles
+  looked up 9 of 9 titles
+  HTTP 429, waiting 53 s
+  looked up 9 of 9 titles
+  looked up 8 of 8 titles
+Wrote seed/wikipedia-links.cypher: films 150/152, people 456/464
+Unmatched films (2): The Pianist (2002); Gravity (2013)
+Unmatched people (8): Lana Wachowski; Lilly Wachowski; Carrie Henn; Ben Burtt; Anthony Russo; Joe Russo; Madonna; John Legend
