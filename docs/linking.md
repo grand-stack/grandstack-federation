@@ -2,7 +2,7 @@
 
 Federation needs a key: for each film and person, the title of its English Wikipedia page. Looking titles up at request time is unreliable (we saw *Heat*, *Alien*, *Parasite* and *Gladiator* land on the wrong pages), so the links are built once, by a script, checked by rules, and committed.
 
-> **Where to run this.** Commands on this page that start with `npm`, `node` or `docker build` run inside a clone of this repository: `git clone https://github.com/grand-stack/grandstack-federation`, then `cd grandstack-federation` (Node 22 or later; run `npm ci` once). Commands that need the running stack use the `grandstack` repository's compose files: see the [quickstart](https://grandstack.ai/quickstart/).
+> **Where to run this.** Commands on this page that start with `npm`, `node` or `docker build` run inside a clone of this repository: `git clone https://github.com/grand-stack/grandstack-federation`, then `cd grandstack-federation` (Node 22 or later; run `npm ci` once). Commands that need the running stack use the `grandstack` repository's compose files: see the [quickstart](https://www.grandstack.ai/quickstart/).
 
 ![The link flow](diagrams/link-flow.svg)
 
