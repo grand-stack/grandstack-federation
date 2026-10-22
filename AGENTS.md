@@ -33,4 +33,5 @@ The stack: `docker compose -f compose.yaml -f compose.federation.yaml up --build
 - Wikipedia is live and rate limited; unit tests must not call it (use a fake `fetch`).
 - Do not claim in docs what you did not run. Auth with federation is not built or tested; keep saying so.
 - Keep the diagram legends and coverage numbers in the docs true when the data or links change.
-- New code files need the copyright header (two lines: `Copyright (c) "Neo4j"` and `Neo4j Sweden AB [http://neo4j.com]`, in the file's comment syntax). Run `node ../grandstack/scripts/add-headers.mjs` to add it everywhere; `--check` lists what is missing. Generated files are exempt.
+- New code files need the copyright header (two lines: `Copyright (c) "Neo4j"` and `Neo4j Sweden AB [http://neo4j.com]`, in the file's comment syntax). Run `node ../grandstack/scripts/add-headers.mjs` (or `node ../.github/scripts/headers.mjs --root .` for one repository) to add it; `--check` lists what is missing. Generated files are exempt.
+- Releases use the **release-cut** workflow (Actions tab), which sets the version in every `package.json`, tags and publishes. Do not bump versions or push tags by hand; see `grandstack/docs/releasing.md`.

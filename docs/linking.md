@@ -9,7 +9,7 @@ Federation needs a key: for each film and person, the title of its English Wikip
 3. **The Wikipedia Action API** answers 20 titles per request (description, intro text, Wikidata id, disambiguation flag), following redirects. (The REST summary endpoint, which the subgraph uses at run time, is rate limited hard for pages it has not cached; one page at a time took an hour. Batching takes about a minute.)
 4. **The matching rules** (`scripts/matching.ts`, unit tested with recorded responses) accept a page only if it passes: for a film, a normal page whose title says "(YYYY film)" with the right year, or whose description says it is a film and mentions the release year (give or take one); for a person, a normal page whose description names a screen occupation (actor, actress, director, filmmaker, producer, screenwriter, comedian, cinematographer, stuntman, animator, sound designer; plurals too). Disambiguation pages, missing pages and namesakes with other jobs are rejected.
 5. **`seed/wikipedia-links.cypher`** is the committed result: two `UNWIND` statements that set `wikipediaTitle` and `wikidataId`.
-6. **The server runs it at every start** (`SETUP_CYPHER_PATHS`). It only sets a link that is not set yet (`WHERE m.wikipediaTitle IS NULL`), so restarts are harmless and hand-set links are kept.
+6. **The server runs it at every start, after the seed** (`SETUP_CYPHER_PATHS`), so a fresh database gets its links on the first start. It only sets a link that is not set yet (`WHERE m.wikipediaTitle IS NULL`), so restarts are harmless and hand-set links are kept.
 
 ## Coverage
 
