@@ -29,10 +29,10 @@ extend type Movie @key(fields: "wikipediaTitle") {
 The key and the Wikidata id are ordinary properties on the nodes. They are writable through the generated mutations, so a film can be linked by hand:
 
 ```graphql
-mutation { updateMovies(where: { title: { eq: "My Film" } }, update: { wikipediaTitle: { set: "Inception" } }) { movies { wikipedia { title } } } }
+mutation { updatePeople(where: { name: { eq: "Madonna" } }, update: { wikipediaTitle: { set: "Madonna" } }) { people { name wikipedia { description } } } }
 ```
 
-(The smoke script does exactly this with a throwaway film.) The links file only fills in a link that is not set yet, so a link you set by hand is kept when the server restarts.
+(The [recipes](recipes.md#link-one-more-film-or-person) show it and how to undo it; the smoke script does the same for a film.) The links file only fills in a link that is not set yet, so a link you set by hand is kept when the server restarts.
 
 **Version pin.** `@neo4j/graphql` 7.6.4 brings `@apollo/subgraph`, and version 2.15.1 of it crashes with `doc.definitions is not iterable`. The server pins 2.14.4 with `overrides` in its `package.json`. See [what we tried](prototype-findings.md).
 

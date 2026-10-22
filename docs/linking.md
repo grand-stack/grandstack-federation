@@ -32,6 +32,8 @@ Things the rules did on purpose that you may notice: a duo that shares one page 
 npm run links      # needs the stack running (the GraphQL API) and internet
 ```
 
+It reads the films and people from `GRAPHQL_URL` (default `http://localhost:4000/graphql`, the gateway in the federation setup or the plain server in the default one; either works).
+
 Responses are cached in `scripts/.cache/` (not committed), so an interrupted run resumes. If Wikipedia answers 429 the script waits as long as the server asks and retries. Set `WIKIPEDIA_USER_AGENT` to identify yourself. Review `git diff seed/wikipedia-links.cypher` before committing: Wikipedia changes, and so can the matches.
 
 ## Licence

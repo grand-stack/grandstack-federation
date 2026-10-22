@@ -25,11 +25,11 @@ transportEntries: {
 }
 ```
 
-To compose against other addresses, set `NEO4J_URL` and `WIKIPEDIA_URL` when running `npm run compose`; to run the gateway somewhere else, set the same variables on the gateway.
+To compose against other addresses, set `NEO4J_URL` and `WIKIPEDIA_URL` when running `npm run compose` (they are then stored in the supergraph, so recompose with the defaults before you commit it; see the [recipe](recipes.md#try-it-beside-the-running-stack-first)); to run the gateway somewhere else, set the same variables on the gateway.
 
 ## The gateway
 
-Hive Gateway runs in supergraph mode (`gateway/Dockerfile`, image `ghcr.io/graphql-hive/gateway:2.15.2`) on port 4000 with CORS for `http://localhost:3000` (`CORS_ORIGIN` to change). To run a second gateway on your machine against the published subgraph ports (handy while developing a subgraph): `NEO4J_URL=http://localhost:4001/graphql WIKIPEDIA_URL=http://localhost:4010/graphql npm run gateway`, which listens on port 4300 and uses the same config.
+Hive Gateway runs in supergraph mode (`gateway/Dockerfile`, image `ghcr.io/graphql-hive/gateway:2.15.2`) on port 4000 with CORS for `http://localhost:3000` (`CORS_ORIGIN` to change). To run a second gateway on your machine against the published subgraph ports (handy while developing a subgraph): `NEO4J_URL=http://localhost:4001/graphql WIKIPEDIA_URL=http://localhost:4010/graphql npm run gateway`, which listens on port 4300 (`npm run gateway -- --port 4301` for another) and uses the same config.
 
 ## Why not Mesh's OpenAPI source for Wikipedia?
 

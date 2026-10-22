@@ -6,9 +6,11 @@ Federation for GRANDstack: the Neo4j subgraph (`grandstack-server` with `FEDERAT
 
 ```sh
 npm ci
-npm test               # 22 unit tests, no network
+npm test               # unit tests (22 today), no network
 npm run typecheck
 npm run docs:check     # links, anchors, alt text, SVGs, diagram legends
+npm run wikipedia      # the Wikipedia subgraph on :4010 (PORT to change)
+npm run gateway        # a local gateway on :4300 (see docs/composition.md)
 npm run compose        # recompose gateway/supergraph.graphql (subgraphs must be running)
 npm run smoke          # needs the federation stack running and internet
 npm run links          # rebuild seed/wikipedia-links.cypher (stack and internet)
