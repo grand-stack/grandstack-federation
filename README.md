@@ -58,4 +58,4 @@ The first start of the gateway needs a `gateway/supergraph.graphql`; the committ
 
 Working with a coding agent? Start with [AGENTS.md](AGENTS.md).
 
-Last verified: grandstack-federation v0.1.0 with grandstack-server v0.9.0, grandstack-web v0.5.1, Hive Gateway 2.15.2, Mesh compose CLI 1.8.4, `@apollo/subgraph` 2.14.4, Neo4j 2026.10 community, under Podman 6 on macOS.
+Last verified: grandstack-federation v0.1.1 with grandstack-server v0.9.0, grandstack-web v0.5.1, Hive Gateway 2.15.2, Mesh compose CLI 1.8.4, `@apollo/subgraph` 2.14.4, Neo4j 2026.10 community, under Podman 6 on macOS.
