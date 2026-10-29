@@ -33,6 +33,12 @@ To compose against other addresses, set `NEO4J_URL` and `WIKIPEDIA_URL` when run
 
 Hive Gateway runs in supergraph mode (`gateway/Dockerfile`, image `ghcr.io/graphql-hive/gateway:2.15.2`) on port 4000 with CORS for `http://localhost:3000` (`CORS_ORIGIN` to change). To run a second gateway on your machine against the published subgraph ports (handy while developing a subgraph): `NEO4J_URL=http://localhost:4001/graphql WIKIPEDIA_URL=http://localhost:4010/graphql npm run gateway`, which listens on port 4300 (`npm run gateway -- --port 4301` for another) and uses the same config.
 
+## Using the gateway image with another setup's supergraph
+
+The gateway image only needs two files, `/gateway/supergraph.graphql` and `/gateway/gateway.config.ts`. `gateway/Dockerfile` copies this repository's own, but another setup can build the same image and mount its own files over them. The Aura setup does exactly that: `compose.aura.yaml` in the `grandstack` repository builds `../grandstack-federation/gateway` and mounts `grandstack-web-aura/gateway/supergraph.graphql` and `gateway.config.ts`, with its own subgraph names (`Neo4j` and `Aura`) and addresses. The supergraph in such a setup is composed by that setup's own `mesh.config.ts`, from its own running subgraphs.
+
+Keep in mind: the config file may only import what the image already has (`@graphql-hive/gateway`), and a mounted supergraph is read when the gateway starts and watched afterwards, so recreate the container after you recompose.
+
 ## Why not Mesh's OpenAPI source for Wikipedia?
 
 We built that first and it worked for linked films, but it handled a film with no link badly. See [what we tried](prototype-findings.md).
