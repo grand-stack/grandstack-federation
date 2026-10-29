@@ -27,6 +27,7 @@ The stack: `docker compose -f compose.yaml -f compose.federation.yaml up --build
 
 ## Rules
 
+- **Build on the blocks; do not make a silo.** A new repository or setup must be made from what GRANDstack already provides (the `grandstack-server` image and its models, the `grandstack-federation` gateway, `grandstack-auth`, `grandstack-agents`, compose overlays in the `grandstack` repository), and improve a block when it falls short rather than copying or working around it. Read [building on GRANDstack](../grandstack/docs/building-on-grandstack.md) before creating a repository, a compose file, a server, a gateway or a docs structure. Providing building blocks that people shape into their own solution is a goal of the project.
 - Recompose (`npm run compose`) and rebuild the gateway whenever a subgraph schema changes; commit the new supergraph.
 - Keep `@apollo/subgraph` at 2.14.4 (the server pins it too); 2.15.1 breaks `@neo4j/graphql` 7.6.4.
 - A wrong Wikipedia link is worse than none: do not loosen `matching.ts` without a test with a recorded response.
